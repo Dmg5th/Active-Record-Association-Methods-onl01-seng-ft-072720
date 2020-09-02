@@ -12,7 +12,7 @@ class Genre < ActiveRecord::Base
   end
 
   def all_artist_names
-    self.artists.all.name 
-    binding.pry 
+    self.artists.map { |art| art.name } 
+    # binding.pry 
   end
 end
